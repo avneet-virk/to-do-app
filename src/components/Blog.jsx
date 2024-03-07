@@ -85,7 +85,7 @@ import {
   
     return (
       <>
-        <div className="flex w-full h-auto">
+        <div className="w-3/4 ml-12 flex h-auto">
           <div className="h-auto  w-full bg-gray-700 rounded-lg p-4">
             <div className="flex flex-1 justify-center mr-auto p-4">
               <ToDoInput id={id} />

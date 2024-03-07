@@ -11,7 +11,6 @@ function BlogScreen() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
-  const [speed, setSpeed] = useState();
   const [isOpen, setIsOpen] = useState(false);
 
   const logout = async () => {
@@ -19,9 +18,6 @@ function BlogScreen() {
     navigate(`/`);
   };
 
-  useEffect(() => {
-    setSpeed(Math.floor(Math.random() * 5000));
-  }, []);
 
   return (
     <div>
@@ -35,9 +31,7 @@ function BlogScreen() {
       <ProfileUpdate
         userName={user?.displayName}
         userEmail={user?.email}
-        speed={speed}
         id={id}
-        setIsOpen={setIsOpen}
       />
     </div>
   );

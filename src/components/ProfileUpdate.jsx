@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "react-calendar/dist/Calendar.css";
-import Clock from "react-clock";
 import "react-clock/dist/Clock.css";
 import Blog from "./Blog";
 import ProfileSide from "./ProfileSide";
 
 function ProfileUpdate({ userName, userEmail, id }) {
-  const [value, setValue] = useState(new Date());
 
-  useEffect(() => {
-    const interval = setInterval(() => setValue(new Date()), 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
   return (
     <div>
       <div className="w-full  bg-main-color">
