@@ -20,7 +20,6 @@ function ToDoInput({ id }) {
 
   const sendTodo = async (e) => {
     e.preventDefault();
-
     try {
       await addDoc(collection(firestore, "users", id, "todo"), {
         todo: todo,

@@ -19,7 +19,7 @@ function IsChecked({ checkTodo, unCheckTodo, todo, id, onDeleteComment }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  /* console.log(checkId, "yoooooooooooo"); */
+console.log(checkId, "yoooooooooooo",todo.id);
 
   useEffect(
     () =>

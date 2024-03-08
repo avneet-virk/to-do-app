@@ -31,8 +31,6 @@ import {
       [firestore, id]
     );
   
-    /* console.log(getTodo); */
-    /* console.log(passCheckId); */
   
     const onDeleteComment = async (todo) => {
       try {
@@ -69,10 +67,10 @@ import {
       } catch (error) {
         console.log(error);
       }
-      /*  setIsCheck(false); */
     };
   
     const unCheckTodo = async (todo) => {
+      console.log('unchecked')
       try {
         await deleteDoc(
           doc(firestore, "users", id, "todo", todo.id, "check", todo.id)
@@ -80,7 +78,6 @@ import {
       } catch (error) {
         console.log(error);
       }
-      /* setIsCheck(true); */
     };
   
     return (
