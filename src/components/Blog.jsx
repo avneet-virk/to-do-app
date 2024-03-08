@@ -70,7 +70,6 @@ import {
     };
   
     const unCheckTodo = async (todo) => {
-      console.log('unchecked')
       try {
         await deleteDoc(
           doc(firestore, "users", id, "todo", todo.id, "check", todo.id)

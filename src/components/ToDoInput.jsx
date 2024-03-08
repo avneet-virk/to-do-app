@@ -29,12 +29,13 @@ function ToDoInput({ id }) {
         userImage: user?.photoURL,
         timestamp: serverTimestamp(),
       });
+      setTodo("");
+      setDateTime("");
     } catch (error) {
       console.log(error);
     }
 
-    setTodo("");
-    setDateTime("");
+
   };
   return (
     <div className="flex justify-center mb-5">
